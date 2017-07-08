@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_weight="7"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@drawable/green" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textSize="10pt"
+            android:text="Your device is protected." />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:text="Last snapshot was created at" />
+    </LinearLayout>
+
+    <io.github.yavski.fabspeeddial.FabSpeedDial
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:fabGravity="bottom_end"
+        app:fabMenu="@menu/fab"
+        app:fabBackgroundTint="@color/colorBlue"
+        app:miniFabBackgroundTint="@android:color/white"
+        app:miniFabDrawableTint="@color/colorBlue"
+        app:miniFabTitleTextColor="@color/colorBlue" />
+
+
+
+</FrameLayout>
