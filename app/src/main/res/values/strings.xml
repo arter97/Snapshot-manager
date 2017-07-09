@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">Snapshot manager</string>
+    <string name="app_name">"Snapshot manager"</string>
+
+    <string name="system_restore">"System restore"</string>
+    <string name="tempered">"Your data might have been tempered by a malware"</string>
+
+    <string name="green">"Your device is protected."</string>
+    <string name="red">"Your device is not protected."</string>
+
+    <string name="snapshot_stat">"Last snapshot was created at %s."</string>
+    <string name="snapshot_stat_bad">"Please create a new snapshot!"</string>
+    <string name="snapshot_exists">"A snapshot with that name already exists!"</string>
+    <string name="no_snapshots">"There are no snapshots!"</string>
+
+    <string name="fab_add">"Create a new snapshot"</string>
+    <string name="fab_rm">"Delete snapshot"</string>
+    <string name="fab_history">"Restore to a snapshot"</string>
+    <string name="fab_help">"Help"</string>
+
+    <string name="fab_add_title">"Create a new snapshot manually"</string>
+    <string name="fab_add_msg">"This operation will be done instantly.\n\nManual snapshots won't be automatically deleted."</string>
+    <string name="snapshot_created">"Snapshot created!"</string>
+
+    <string name="fab_rm_msg">"Remove %d snapshot(s)?\n\nThis can't be undone!"</string>
+    <string name="sel_more">"Please select an item!"</string>
+    <string name="snapshot_deleted">"Snapshot(s) deleted!"</string>
+
+    <string name="fab_history_msg">"Restore to %s snapshot?"</string>
 </resources>

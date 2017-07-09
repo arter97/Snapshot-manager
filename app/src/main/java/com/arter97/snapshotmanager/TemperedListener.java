@@ -2,6 +2,7 @@ package com.arter97.snapshotmanager;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -24,10 +25,17 @@ public class TemperedListener extends Service {
         NotificationManager mNotifyManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         Notification.Builder nBuilder = new Notification.Builder(this);
 
-        nBuilder.setContentTitle("System recovery");
-        nBuilder.setContentText("Your data might have been tempered by a malware");
-        nBuilder.setSmallIcon(R.mipmap.ic_launcher);
-        nBuilder.setOngoing(true); // Do not allow user to dismiss without interacting first
+        Intent intent = new Intent();
+        intent.setClass(this, RestoreSnapshot.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        nBuilder.setContentTitle(getString(R.string.system_restore));
+        nBuilder.setContentText(getString(R.string.tempered));
+        nBuilder.setSmallIcon(R.drawable.ic_noti);
+        nBuilder.setOngoing(true); // Do not allow uer to dismiss without interacting first
+        nBuilder.setAutoCancel(true);
+        nBuilder.setContentIntent(pIntent);
 
         mNotifyManager.notify(1, nBuilder.build());
 

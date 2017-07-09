@@ -25,8 +25,9 @@
             android:gravity="center_horizontal"
             android:layout_weight="1"
             android:layout_gravity="center"
+            android:textColor="@color/colorWhite"
             android:textSize="10pt"
-            android:text="Your device is protected." />
+            android:text="@string/green" />
 
         <TextView
             android:id="@+id/textView2"
@@ -35,13 +36,16 @@
             android:layout_weight="5"
             android:gravity="center_horizontal"
             android:layout_gravity="center"
-            android:text="Last snapshot was created at" />
+            android:textColor="@color/colorWhite"
+            android:text="@string/snapshot_stat" />
     </LinearLayout>
 
     <io.github.yavski.fabspeeddial.FabSpeedDial
+        android:id="@+id/main_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        app:fabDrawable="@drawable/ic_settings_black_24dp"
         app:fabGravity="bottom_end"
         app:fabMenu="@menu/fab"
         app:fabBackgroundTint="@color/colorBlue"
